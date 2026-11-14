@@ -4,11 +4,20 @@ public class Day74 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String teks = input.nextLine();
+        System.out.print("Masukkan judul buku: ");
+        String judul = input.nextLine();
 
-        System.out.println("Panjang karakter : " + teks.length());
-        System.out.println("Huruf kapital    : " + teks.toUpperCase());
-        System.out.println("Huruf kecil      : " + teks.toLowerCase());
+        int panjang = judul.length();
+
+        System.out.println("Huruf kapital    : " + judul.toUpperCase());
+        System.out.println("Huruf kecil      : " + judul.toLowerCase());
+        System.out.println("Jumlah karakter  : " + panjang);
+
+        if (panjang > 20) {
+            System.out.println("Judul buku cukup panjang");
+        } else {
+            System.out.println("Judul buku tidak terlalu panjang");
+        }
 
         input.close();
     }
